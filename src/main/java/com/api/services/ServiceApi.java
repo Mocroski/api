@@ -38,4 +38,29 @@ public class ServiceApi {
 		return new ResponseEntity<>(pessoaRepository.findAll(), HttpStatus.OK);
 	}
 	
+	/*
+	 * //metodo para editar dados public ResponseEntity<?> editar(Pessoa obj) {
+	 * 
+	 * if(pessoaRepository.countById(obj.getId()) ==0) {
+	 * message.setMessage("Id inexistente"); return new ResponseEntity<>(message,
+	 * HttpStatus.NOT_FOUND); }else if(obj.getName().equals("")) {
+	 * message.setMessage("é necessario inorma um nome"); return new
+	 * ResponseEntity<>(message, HttpStatus.BAD_REQUEST); }else { return new
+	 * ResponseEntity<>(pessoaRepository.save(obj), HttpStatus.OK); } }
+	 */
+	
+	/*
+	 * //metodo para remover public ResponseEntity<?> excluir(Long id) {
+	 * 
+	 * if(pessoaRepository.countById(id) == 0) {
+	 * message.setMessage("Id inexistente"); return new
+	 * ResponseEntity<>(message,HttpStatus.NOT_FOUND); }else {
+	 * 
+	 * Pessoa obj = pessoaRepository.findById(id); pessoaRepository.delete(obj);
+	 * 
+	 * message.setMessage("Removido com sucesso"); return new
+	 * ResponseEntity<>(message, HttpStatus.OK); }
+	 * 
+	 * }
+	 */
 }
