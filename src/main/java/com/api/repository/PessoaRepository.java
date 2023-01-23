@@ -31,7 +31,8 @@ public interface PessoaRepository extends CrudRepository<Pessoa, Long>{
 	 * somaId();
 	 */
 	
-	
-	@Query(value = "SELECT * FROM pessoas WHERE parametro >= :parametro", nativeQuery = true)
-	List<Pessoa> parametroMaiorIgual(int parametro);
+	/*
+	 * @Query(value = "SELECT * FROM pessoas WHERE parametro >= :parametro",
+	 * nativeQuery = true) List<Pessoa> parametroMaiorIgual(int parametro);
+	 */
 }
