@@ -18,6 +18,7 @@ public class ServiceApi {
 	@Autowired
 	private PessoaRepository pessoaRepository;
 	
+	//metodo para cadastrar pessoas
 	public ResponseEntity<?> cadastrar(Pessoa obj){
 		
 		if(obj.getName().equals("")) {
@@ -27,6 +28,14 @@ public class ServiceApi {
 		
 		return new ResponseEntity<>(pessoaRepository.save(obj), HttpStatus.CREATED);
 		
+	}
+	
+	
+	//metodo para selececioar pessoas
+	
+	@Autowired
+	public ResponseEntity<?> selecionar() {
+		return new ResponseEntity<>(pessoaRepository.findAll(), HttpStatus.OK);
 	}
 	
 }
