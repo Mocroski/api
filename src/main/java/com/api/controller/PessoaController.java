@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api.entities.Cliente;
 import com.api.entities.Pessoa;
 import com.api.repository.PessoaRepository;
 import com.api.services.ServiceApi;
+
+import jakarta.validation.Valid;
 
 @RestController
 public class PessoaController {
@@ -73,5 +76,9 @@ public class PessoaController {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
+	@PostMapping("/cliente")
+	public void cliente(@Valid @RequestBody Cliente obj) {
+		
+	}
 	
 }
